@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@700&display=swap");
+
+:root {
+  --color-main: #0f4c81;
+  --color-highlight: #6a8cc3;
+  --color-light: #f2efe3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: var(--color-light);
+  background-color: var(--color-main);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--color-main);
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  transition: box-shadow 200ms ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 0 0 2px var(--color-highlight);
+}
+
+button:active {
+  box-shadow: 0 0 0 2px var(--color-highlight) inset;
+  background-color: var(--color-highlight);
+  color: var(--color-main);
+}
+
+.countdown {
+  margin: 0 0 4rem;
+}
+
+.countdown h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 0 1.8rem;
+}
+
+.countdown .numbers {
+  display: flex;
+  gap: 1rem;
+  min-width: 600px;
+}
+
+.countdown .numbers div {
+  background-color: var(--color-highlight);
+  border-radius: 6px;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1.5rem;
+  text-align: center;
+  flex: 1 0 0;
+}
+
+.countdown .numbers span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 4.5rem;
+}
+
+/******
+ ** non-timer extra stuff
+ *****/
+.hidden {
+  display: none;
+}
+
+canvas {
+  cursor: crosshair;
+  display: block;
+  position: absolute;
+  inset: 0;
+}
